@@ -1,15 +1,18 @@
 // ==UserScript==
-// @name         GitHub Inline Media Thumbnails
-// @namespace    https://github.com/moonexpr/github-thumbnailer
-// @version      1.1.1
-// @description  Render image/video thumbnails and inline audio players in GitHub directory (folder) listings, so you can preview media without clicking into each file.
-// @author       you
-// @match        *://github.com/*
-// @match        *://www.github.com/*
-// @match        *://*.github.com/*
-// @icon         https://github.githubassets.com/favicons/favicon.png
-// @grant        none
-// @run-at       document-idle
+// @name        GitHub Inline Media Thumbnails
+// @version     1.2.0
+// @description Render image/video thumbnails and inline audio players in GitHub directory (folder) listings, so you can preview media without clicking into each file.
+// @license     MIT
+// @author      you
+// @namespace   https://github.com/moonexpr/github-thumbnailer
+// @match       https://github.com/*
+// @match       https://*.github.com/*
+// @run-at      document-idle
+// @grant       none
+// @icon        https://github.githubassets.com/favicons/favicon.png
+// @updateURL   https://raw.githubusercontent.com/moonexpr/github-thumbnailer/main/github-thumbnails.user.js
+// @downloadURL https://raw.githubusercontent.com/moonexpr/github-thumbnailer/main/github-thumbnails.user.js
+// @supportURL  https://github.com/moonexpr/github-thumbnailer/issues
 // ==/UserScript==
 
 (function () {

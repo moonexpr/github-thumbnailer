@@ -1,0 +1,24 @@
+{
+  "name": "github-thumbnailer",
+  "version": "1.2.0",
+  "description": "A Tampermonkey userscript that adds inline media thumbnails for files shown in GitHub directory listings.",
+  "main": "github-thumbnails.user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonexpr/github-thumbnailer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/moonexpr/github-thumbnailer/issues"
+  },
+  "homepage": "https://github.com/moonexpr/github-thumbnailer#readme",
+  "devDependencies": {
+    "eslint": "^10.11.0"
+  }
+}
