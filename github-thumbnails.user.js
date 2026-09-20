@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         GitHub Inline Media Thumbnails
-// @namespace    https://github.com/inline-thumbnails
-// @version      1.0.5
+// @namespace    https://github.com/moonexpr/github-thumbnailer
+// @version      1.1.1
 // @description  Render image/video thumbnails and inline audio players in GitHub directory (folder) listings, so you can preview media without clicking into each file.
 // @author       you
-// @match        https://github.com/*
+// @match        *://github.com/*
+// @match        *://www.github.com/*
+// @match        *://*.github.com/*
 // @icon         https://github.githubassets.com/favicons/favicon.png
 // @grant        none
 // @run-at       document-idle
@@ -14,10 +16,10 @@
   'use strict';
 
   /* ----------------------------- config ----------------------------- */
-  const THUMB_W = 44;        // px, fixed thumbnail box width  (images + video)
-  const THUMB_H = 32;        // px, fixed thumbnail box height (images + video)
-  const PREVIEW_MAX  = 480;  // px, max dimension of the hover preview
-  const AUDIO_WIDTH  = 240;  // px, width of the inline audio player
+  const THUMB_W = 44; // px, fixed thumbnail box width  (images + video)
+  const THUMB_H = 32; // px, fixed thumbnail box height (images + video)
+  const PREVIEW_MAX = 480; // px, max dimension of the hover preview
+  const AUDIO_WIDTH = 240; // px, width of the inline audio player
 
   const IMG_EXT = /\.(png|jpe?g|gif|webp|bmp|ico|svg|avif)$/i;
   const VID_EXT = /\.(mp4|webm|ogv|m4v|mov)$/i;
