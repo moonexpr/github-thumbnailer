@@ -99,11 +99,13 @@
   }
 
   /* ------------------------- url helpers ---------------------------- */
-  // github.com/{owner}/{repo}/raw/{ref}/{path} is a same-origin redirect to
-  // the raw CDN. Private repos work via your session cookie, and we never
-  // have to parse the ref.
+  // Prefer the direct raw GitHub CDN URL. It avoids GitHub's redirect flow and
+  // matches the raw.githubusercontent.com host explicitly.
   function rawUrl(blobPath) {
-    return 'https://github.com' + blobPath.replace('/blob/', '/raw/');
+    const match = blobPath.match(/^\/([^/]+)\/([^/]+)\/blob\/(?:[^/]+\/)?(.+)$/);
+    if (!match) return 'https://github.com' + blobPath;
+    const [, owner, repo, path] = match;
+    return `https://raw.githubusercontent.com/${owner}/${repo}/main/${path}`;
   }
   function basename(path) {
     const clean = path.split('?')[0].split('#')[0];
