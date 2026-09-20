@@ -1,6 +1,6 @@
 {
   "name": "github-thumbnailer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A Tampermonkey userscript that adds inline media thumbnails for files shown in GitHub directory listings.",
   "main": "github-thumbnails.user.js",
   "scripts": {
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/moonexpr/github-thumbnailer#readme",
   "devDependencies": {
-    "eslint": "^10.11.0"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0"
   }
 }
